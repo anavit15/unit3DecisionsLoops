@@ -1,4 +1,4 @@
-Introduction
+﻿Introduction
 
 The goal of this lab is to apply your understanding of decision and loop
 	structures to implement a complex algorithm within the context of an
@@ -30,6 +30,15 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal
 	moment at which this happens is sometimes called a tick (in other words,
 	each generation is a pure function of the preceding one). The rules
 	continue to be applied repeatedly to create further generations.
+
+MY REQUIREMENTS:
+*Grid will be 6 by 6 
+*Live cells will be red
+*dead cells will be black
+*the pattern will be hard coded (only one is available)
+*the game will run 10 times
+*the time interval between cases will be 5 seconds
+*edge cases will be subject to the same rules despite the fact that they will have access to 3 fewer cells
 
 
 Nonfunctional Requirements:
