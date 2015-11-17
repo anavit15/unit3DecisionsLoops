@@ -6,11 +6,10 @@ import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
 
 /**
- * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
- * Also demonstrates how to provide accessor methods to make the class testable by unit tests.
- * 
- * @author @gcschmit
- * @version 18 July 2014
+ * Game of Life code that runs the game of life algortithm on a prespecified pattern 10 times.
+ *
+ * @author Anavi Tekriwal
+ * @version 17 November 2015
  */
 public class GameOfLife
 {
@@ -37,11 +36,24 @@ public class GameOfLife
         
         // populate the game
         populateGame();
-        createNextGeneration();
-        createNextGeneration();
-        
+        int count=1;
+        //runs the cycles of game of life
+        while (count<=10)
+        {
+            try
+            {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException ex)
+            {
+                Thread.currentThread().interrupt();
+            }
+            createNextGeneration();
+            world.show();
+            count++;
+        }
         // display the newly constructed and populated world
-        world.show();
+        
         
     }
         
@@ -129,9 +141,9 @@ public class GameOfLife
             for (int col = 0; col < COLS; col++)
             {
               Location loc=new Location(row,col);
-              if (getActor(row,col)==null)
+              if (getActor(row,col)!=null)
               {
-                  if (grid.getNeighbors(loc).size()!=2 || grid.getNeighbors(loc).size()!=3)
+                  if (grid.getNeighbors(loc).size()<2 || grid.getNeighbors(loc).size()>3)
                   {
                       deadCells[deadCellArrayPlace]=loc;
                       deadCellArrayPlace++;
@@ -217,6 +229,7 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
+     
         
-    }
+   }
 }

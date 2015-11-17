@@ -23,7 +23,6 @@ public class FindFirstMatch
             {
                 position++;
             }
-                
         }
         if (found)
         {

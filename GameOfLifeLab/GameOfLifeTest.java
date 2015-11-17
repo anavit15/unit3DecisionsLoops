@@ -8,8 +8,8 @@ import info.gridworld.actor.Actor;
 /**
  * The test class GameOfLifeTest.
  *
- * @author  @gcschmit
- * @version 19 July 2014
+ * @author  Anavi Tekriwal
+ * @version 17 November 2015
  */
 public class GameOfLifeTest
 {
@@ -104,6 +104,9 @@ public class GameOfLifeTest
          */
         
         GameOfLife game = new GameOfLife();
+        
+        game.createNextGeneration();
+        game.createNextGeneration();
         final int ROWS = game.getNumRows();
         final int COLS = game.getNumCols();
 

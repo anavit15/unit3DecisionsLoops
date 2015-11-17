@@ -33,11 +33,11 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal
 
 MY REQUIREMENTS:
 *Grid will be 6 by 6 
-*Live cells will be red
-*dead cells will be black
+*Live cells will be black rocks
+*dead cells will be white boxes
 *the pattern will be hard coded (only one is available)
 *the game will run 10 times
-*the time interval between cases will be 5 seconds
+*the time interval between cases will be 1 second
 *edge cases will be subject to the same rules despite the fact that they will have access to 3 fewer cells
 
 
